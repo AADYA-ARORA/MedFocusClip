@@ -7,7 +7,7 @@
 - **Advanced Segmentation**: Utilizes SAM2 to localize important regions in medical images.
 - **Improved Accuracy**: Demonstrates higher performance than standard models across multiple medical datasets.
 
-![Architecture](images/covid19_accuracy_graph.png)
+![Architecture](https://github.com/AADYA-ARORA/MedFocusClip/blob/main/image.png)
 
 ---
 
@@ -39,7 +39,7 @@ We evaluated MedFocusCLIP on multiple medical datasets, demonstrating significan
 | Swin-Transformer  | 75.56%             | 79.65%              | 81.48%              | 84.35%              | 85.68%               |
 | **MedFocusCLIP**  | **81.28%**         | **82.12%**          | **84.49%**          | **85.63%**          | **91.52%**           |
 
-![Lung Disease Accuracy Graph][https://github.com/AADYA-ARORA/MedFocusClip/blob/main/lungs.png]
+![Lung Disease Accuracy Graph](https://github.com/AADYA-ARORA/MedFocusClip/blob/main/lungs.png)
 
 ---
 
