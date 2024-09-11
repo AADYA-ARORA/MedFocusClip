@@ -1,26 +1,11 @@
 # MedFocusCLIP: Improving Few-Shot Classification in Medical Datasets
 
-Welcome to the official repository for **MedFocusCLIP**! This project combines SAM2 and CLIP to improve few-shot classification in medical images, enabling precise classification with limited data on tasks like X-rays, MRIs, and CT scans.
+**MedFocusCLIP** leverages the Segment Anything Model 2 (SAM2) and CLIP (Contrastive Language-Image Pre-training) to improve few-shot classification on medical images such as X-rays, CT scans, and MRI scans. By combining segmentation with multimodal vision-language models, MedFocusCLIP enhances the model’s ability to identify critical regions in medical images with limited labeled data.
 
-![Banner](images/medfocusclip_banner.png)
-
----
-
-## 🚀 Key Features
-- **Few-Shot Learning**: Achieve high accuracy with minimal labeled data.
-- **Advanced Segmentation**: Leverages SAM2 to pinpoint crucial regions in medical images.
-- **State-of-the-Art Performance**: Outperforms existing models across multiple medical datasets.
-
----
-
-## 🧠 Architecture
-
-### MedFocusCLIP Framework
-MedFocusCLIP combines SAM2's segmentation capabilities with CLIP’s multimodal vision-language model, utilizing the Vision Transformer (ViT) backbone to enhance few-shot learning.
-
-![MedFocusCLIP Framework](images/medfocusclip_framework.png)
-
-The image demonstrates how SAM2 segments the medical image, while CLIP processes the segmented region, enabling more accurate classification of subtle medical features.
+## Features
+- **Few-Shot Learning**: Efficiently classifies medical images with minimal labeled data.
+- **Advanced Segmentation**: Utilizes SAM2 to localize important regions in medical images.
+- **Improved Accuracy**: Demonstrates higher performance than standard models across multiple medical datasets.
 
 ---
 
@@ -28,16 +13,59 @@ The image demonstrates how SAM2 segments the medical image, while CLIP processes
 
 We evaluated MedFocusCLIP on multiple medical datasets, demonstrating significant improvements in accuracy for few-shot learning.
 
-### Performance on COVID-19 Dataset
-![Performance Comparison on COVID-19 Dataset](images/covid19_results.png)
+### 1. COVID-19 Dataset
 
-| Model             | Accuracy (5% Data) | Accuracy (100% Data) |
-|-------------------|--------------------|----------------------|
-| ResNet            | 51.52%             | 80.30%               |
-| Res2Net           | 43.94%             | 83.33%               |
-| VIT               | 65.15%             | 65.15%               |
-| Swin-Transformer  | 51.52%             | 86.36%               |
-| **MedFocusCLIP**  | **71.15%**         | **93.94%**           |
+| Model             | Accuracy (5% Data) | Accuracy (10% Data) | Accuracy (20% Data) | Accuracy (50% Data) | Accuracy (100% Data) |
+|-------------------|--------------------|---------------------|---------------------|---------------------|----------------------|
+| ResNet            | 51.52%             | 53.03%              | 62.12%              | 63.64%              | 80.30%               |
+| Res2Net           | 43.94%             | 63.64%              | 68.18%              | 83.33%              | 83.33%               |
+| VIT               | 65.15%             | 45.45%              | 60.61%              | 62.12%              | 65.15%               |
+| Swin-Transformer  | 51.52%             | 62.12%              | 60.61%              | 78.79%              | 86.36%               |
+| **MedFocusCLIP**  | **71.15%**         | **77.27%**          | **83.33%**          | **87.88%**          | **93.94%**           |
+
+![COVID-19 Accuracy Graph](images/covid19_accuracy_graph.png)
+
+---
+
+### 2. Lung Disease Dataset
+
+| Model             | Accuracy (5% Data) | Accuracy (10% Data) | Accuracy (20% Data) | Accuracy (50% Data) | Accuracy (100% Data) |
+|-------------------|--------------------|---------------------|---------------------|---------------------|----------------------|
+| ResNet            | 59.06%             | 69.23%              | 50.81%              | 77.83%              | 83.21%               |
+| Res2Net           | 62.86%             | 66.62%              | 67.31%              | 67.16%              | 68.74%               |
+| VIT               | 48.40%             | 47.51%              | 56.79%              | 57.04%              | 61.28%               |
+| Swin-Transformer  | 75.56%             | 79.65%              | 81.48%              | 84.35%              | 85.68%               |
+| **MedFocusCLIP**  | **81.28%**         | **82.12%**          | **84.49%**          | **85.63%**          | **91.52%**           |
+
+![Lung Disease Accuracy Graph](images/lung_disease_accuracy_graph.png)
+
+---
+
+### 3. Brain Tumor Dataset
+
+| Model             | Accuracy (5% Data) | Accuracy (10% Data) | Accuracy (20% Data) | Accuracy (50% Data) | Accuracy (100% Data) |
+|-------------------|--------------------|---------------------|---------------------|---------------------|----------------------|
+| ResNet            | 68.50%             | 41.88%              | 77.19%              | 92.81%              | 93.75%               |
+| Res2Net           | 70.63%             | 76.13%              | 79.18%              | 80.17%              | 81.31%               |
+| VIT               | 61.48%             | 64.91%              | 64.99%              | 56.14%              | 66.59%               |
+| Swin-Transformer  | 82.46%             | 86.65%              | 86.65%              | 88.94%              | 89.32%               |
+| **MedFocusCLIP**  | **86.09%**         | **92.12%**          | **94.91%**          | **96.28%**          | **97.57%**           |
+
+![Brain Tumor Accuracy Graph](images/brain_tumor_accuracy_graph.png)
+
+---
+
+### 4. Breast Cancer Dataset
+
+| Model             | Accuracy (5% Data) | Accuracy (10% Data) | Accuracy (20% Data) | Accuracy (50% Data) | Accuracy (100% Data) |
+|-------------------|--------------------|---------------------|---------------------|---------------------|----------------------|
+| ResNet            | 53.09%             | 59.28%              | 60.26%              | 62.87%              | 85.02%               |
+| Res2Net           | 55.20%             | 61.45%              | 65.30%              | 70.85%              | 89.50%               |
+| VIT               | 53.42%             | 57.00%              | 57.65%              | 57.98%              | 55.70%               |
+| Swin-Transformer  | 67.43%             | 67.43%              | 70.68%              | 81.43%              | 78.50%               |
+| **MedFocusCLIP**  | **58.63%**         | **69.06%**          | **76.22%**          | **97.39%**          | **96.09%**           |
+
+![Breast Cancer Accuracy Graph](images/breast_cancer_accuracy_graph.png)
 
 ---
 
@@ -50,13 +78,10 @@ We evaluated the effect of using binary masks (black and white) versus segmented
 
 In the figure, the left image is generated by SAM2, and the right image is generated by the SAM Adapter. The SAM2 mask significantly outperforms the SAM Adapter in terms of classification accuracy.
 
-### 2. Using SAM Adapter vs SAM2
-We replaced SAM2 with the SAM Adapter to see its effect on performance. The results showed a marginal decrease in accuracy, indicating that SAM2's sophisticated segmentation is better suited for medical imagery.
-
 ---
 
 ## 📁 Datasets
-MedFocusCLIP has been evaluated on the following datasets:
+MedFocusCLIP has been evaluated on a variety of medical datasets:
 - [COVID-19 Dataset](https://example.com)
 - [Lung Disease Dataset](https://example.com)
 - [Brain Tumor Dataset](https://example.com)
