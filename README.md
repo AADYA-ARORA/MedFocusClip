@@ -25,7 +25,7 @@ We evaluated MedFocusCLIP on multiple medical datasets, demonstrating significan
 | Swin-Transformer  | 51.52%             | 62.12%              | 60.61%              | 78.79%              | 86.36%               |
 | **MedFocusCLIP**  | **71.15%**         | **77.27%**          | **83.33%**          | **87.88%**          | **93.94%**           |
 
-![COVID-19 Accuracy Graph](images/covid19_accuracy_graph.png)
+![COVID-19 Accuracy Graph][https://github.com/AADYA-ARORA/MedFocusClip/blob/main/covid.png]
 
 ---
 
@@ -39,7 +39,7 @@ We evaluated MedFocusCLIP on multiple medical datasets, demonstrating significan
 | Swin-Transformer  | 75.56%             | 79.65%              | 81.48%              | 84.35%              | 85.68%               |
 | **MedFocusCLIP**  | **81.28%**         | **82.12%**          | **84.49%**          | **85.63%**          | **91.52%**           |
 
-![Lung Disease Accuracy Graph](images/lung_disease_accuracy_graph.png)
+![Lung Disease Accuracy Graph][https://github.com/AADYA-ARORA/MedFocusClip/blob/main/lungs.png]
 
 ---
 
@@ -53,7 +53,7 @@ We evaluated MedFocusCLIP on multiple medical datasets, demonstrating significan
 | Swin-Transformer  | 82.46%             | 86.65%              | 86.65%              | 88.94%              | 89.32%               |
 | **MedFocusCLIP**  | **86.09%**         | **92.12%**          | **94.91%**          | **96.28%**          | **97.57%**           |
 
-![Brain Tumor Accuracy Graph](images/brain_tumor_accuracy_graph.png)
+![Brain Tumor Accuracy Graph][https://github.com/AADYA-ARORA/MedFocusClip/blob/main/brain.png]
 
 ---
 
@@ -67,7 +67,7 @@ We evaluated MedFocusCLIP on multiple medical datasets, demonstrating significan
 | Swin-Transformer  | 67.43%             | 67.43%              | 70.68%              | 81.43%              | 78.50%               |
 | **MedFocusCLIP**  | **58.63%**         | **69.06%**          | **76.22%**          | **97.39%**          | **96.09%**           |
 
-![Breast Cancer Accuracy Graph](images/breast_cancer_accuracy_graph.png)
+![Breast Cancer Accuracy Graph][https://github.com/AADYA-ARORA/MedFocusClip/blob/main/breast.png]
 
 ---
 
